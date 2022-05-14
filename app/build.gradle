@@ -25,6 +25,11 @@ android {
         enabled = true
         enabledForTests = true
     }
+
+    testOptions.unitTests {
+        // include resources such as AndroidManifest in the unit tests
+        includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -63,4 +68,11 @@ dependencies {
 
     // other dependencies
     testImplementation "org.hamcrest:hamcrest-all:$hamcrestVersion"
+
+    // AndroidX test - JVM testing
+    testImplementation "androidx.test.ext:junit-ktx:$androidXTestExtKotlinRunnerVersion"
+    testImplementation "androidx.test:core-ktx:$androidXTestCoreVersion"
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
+    testImplementation "androidx.arch.core:core-testing:$archTestingVersion"
 }
+
