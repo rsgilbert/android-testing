@@ -61,6 +61,12 @@ dependencies {
     // AndroidX Test - Instrumented testing
     androidTestImplementation "androidx.test.ext:junit:$androidXTestExtKotlinRunnerVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "junit:junit:$junitVersion"
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0-RC2")
+    // mockito
+    androidTestImplementation("org.mockito:mockito-core:$mockitoVersion")
+    androidTestImplementation("com.linkedin.dexmaker:dexmaker-mockito:$dexMakerVersion")
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:$espressoVersion")
 
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
@@ -74,5 +80,13 @@ dependencies {
     testImplementation "androidx.test:core-ktx:$androidXTestCoreVersion"
     testImplementation "org.robolectric:robolectric:$robolectricVersion"
     testImplementation "androidx.arch.core:core-testing:$archTestingVersion"
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0-RC2")
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentVersion"
+    implementation "androidx.test:core:$androidXTestCoreVersion"
+
+
+
+
+
 }
 
